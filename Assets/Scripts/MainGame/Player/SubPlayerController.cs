@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SubPlayerController : MonoBehaviour
 {
-    [SerializeField] private float MaxSpeed;
 
     private Rigidbody2D rigidBody;
 
@@ -14,9 +13,5 @@ public class SubPlayerController : MonoBehaviour
     public void AddForce(Vector3 force)
     {
         rigidBody.AddForce(force);
-        if(rigidBody.linearVelocity.magnitude > MaxSpeed)
-        {
-            rigidBody.linearVelocity = rigidBody.linearVelocity.normalized * MaxSpeed;
-        }
     }
 }
