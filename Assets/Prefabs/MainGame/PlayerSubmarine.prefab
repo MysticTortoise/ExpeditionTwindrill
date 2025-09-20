@@ -356,8 +356,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590c749770b6f2f479fba575828791c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageForce: 400
   health: 10
   collider: {fileID: 9134923875678206688}
+  cooldownTime: 2
 --- !u!1 &2816798290393073151
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +429,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.85
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -505,6 +507,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3188721252164443041}
   - component: {fileID: 2124952962702031095}
+  - component: {fileID: 4860800875497172075}
+  - component: {fileID: 7437544287540113887}
   m_Layer: 0
   m_Name: Chain
   m_TagString: Untagged
@@ -582,6 +586,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4860800875497172075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297834919736734243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f4a4d9ad573444baf5b20e891818bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &7437544287540113887
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297834919736734243}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.02, y: 0.16}
+    newSize: {x: 0.02, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.04, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3540547828180391196
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +657,7 @@ GameObject:
   - component: {fileID: 686578491419261304}
   - component: {fileID: 281355874730691724}
   - component: {fileID: 4141138182178050700}
+  - component: {fileID: 2314047716469291357}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -685,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591732759e04ce04ab2c5ca9d810a4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxArmDist: 23.09
+  MaxArmDist: 15
   PullMoveAcceleration: 300
   HandAccel: 5000
   grabSprite: {fileID: -1919680935, guid: f0a3c605c4705c64592d9cd22175721e, type: 3}
@@ -724,7 +787,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.09}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -734,7 +797,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.67, y: 0.61}
   m_EdgeRadius: 0
 --- !u!50 &4141138182178050700
 Rigidbody2D:
@@ -763,6 +826,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2314047716469291357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3540547828180391196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f4a4d9ad573444baf5b20e891818bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8289430279657620490
 GameObject:
   m_ObjectHideFlags: 0
