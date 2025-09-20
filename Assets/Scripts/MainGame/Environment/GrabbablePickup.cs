@@ -19,12 +19,13 @@ public class GrabbablePickup : GrabbableObject
     {
         if (collider.gameObject.layer == LayerMask.NameToLayer("PlayerPickup"))
         {
-            Pickup();
+            Pickup(collider.transform.parent.GetComponent<SubPlayerController>());
         }
     }
 
-    public virtual void Pickup()
+    public virtual void Pickup(SubPlayerController subPlayer)
     {
+        Debug.Log(subPlayer == null);
         Destroy(gameObject);
     }
 }
