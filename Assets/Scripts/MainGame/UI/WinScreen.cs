@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void NextLevel()
     {
-        
+        string curLevelName = SceneManager.GetActiveScene().name;
+        for(int i = 0; i < LevelOrder.levels.Length-1; i++)
+        {
+            if (LevelOrder.levels[i] == curLevelName)
+            {
+                SceneManager.LoadScene(LevelOrder.levels[i+1]);
+                return;
+            }
+        }
+        MainMenu();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MainMenu()
     {
-        
+        SceneManager.LoadScene("MainMenu");
     }
 }

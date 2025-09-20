@@ -35,6 +35,7 @@ public class StoreCollectible : MonoBehaviour
 
     private void Win()
     {
+        FindAnyObjectByType<PlayerUI>().ShowWin();
         Debug.Log("YOU WIN!!! :D");
     }
 }
