@@ -6,4 +6,9 @@ public class PlayerUI : MonoBehaviour
     {
         transform.Find("gameover").gameObject.SetActive(true);
     }
+
+    public void ShowWin()
+    {
+        transform.Find("youwin").gameObject.SetActive(true);
+    }
 }
