@@ -57,11 +57,7 @@ public class ExitButton : MonoBehaviour
             promptTimerText.DOFade(1f, 0.1f);
         });
 
-<<<<<<< Updated upstream
         //countdown & update timer
-=======
-
->>>>>>> Stashed changes
         yield return new WaitForSeconds(3f);
         
 
