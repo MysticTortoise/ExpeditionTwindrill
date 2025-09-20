@@ -6,43 +6,23 @@ using UnityEngine.Rendering;
 
 public class CircleMovement : MonoBehaviour
 {
-public float timeScale;
-public float radius;
-public Rigidbody2D rb;
-private float timer;
+    private float timer = 0;
+    public float timeScale;
+    public float radius;
+    private Vector3 originPoint;
 
+    private void Start()
+    {
+        originPoint = transform.position;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime/timeScale;
-        float xValue = radius*Mathf.Cos(timer)/timeScale;
-        
-        float yValue = radius*Mathf.Sin(timer)/timeScale;
-        if (timer <= Math.PI/2)
-        {
-            rb.linearVelocityX = xValue;
-            rb.linearVelocityY = yValue;
-        }
-        else if (timer <= Math.PI)
-        {
-            rb.linearVelocityX = xValue;
-            rb.linearVelocityY = yValue;
-        }
-        else if (timer <= Math.PI*3/4)
-        {
-            rb.linearVelocityX = xValue;
-            rb.linearVelocityY = yValue;
-        }
-        else if (timer <= Math.PI*2)
-        {
-            rb.linearVelocityX = xValue;
-            rb.linearVelocityY = yValue;
-        }
-        else
-        {
-            timer = 0;
-        }
+        timer += Time.deltaTime / timeScale;
+        transform.position = originPoint + new Vector3(
+            Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius
+            );
     }   
     
 }
