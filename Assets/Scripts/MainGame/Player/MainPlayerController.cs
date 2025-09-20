@@ -29,4 +29,15 @@ public class MainPlayerController : MonoBehaviour
     {
         mouseScreenPos = context.ReadValue<Vector2>();
     }
+
+    public void GrabInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            hand.Grab();
+        } else if (context.canceled)
+        {
+            hand.Release();
+        }
+    }
 }

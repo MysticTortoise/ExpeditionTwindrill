@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class SubPlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float MaxSpeed;
+
+    private Rigidbody2D rigidBody;
+
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddForce(Vector3 force)
     {
-        
+        rigidBody.AddForce(force);
+        if(rigidBody.linearVelocity.magnitude > MaxSpeed)
+        {
+            rigidBody.linearVelocity = rigidBody.linearVelocity.normalized * MaxSpeed;
+        }
     }
 }
