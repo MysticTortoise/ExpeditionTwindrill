@@ -89,7 +89,7 @@ public class HandPlayerController : MonoBehaviour
         {
             Vector3 offset = (goalPosition - sub.transform.position);
             trueGoal = sub.transform.position + offset.normalized * Mathf.Min(MaxArmDist, offset.magnitude);
-            rigidBody.AddForce((goalPosition - transform.position).normalized * HandAccel * Time.deltaTime);
+            rigidBody.AddForce((trueGoal - transform.position).normalized * HandAccel * Time.deltaTime);
         }
         UpdateVisuals();
 
