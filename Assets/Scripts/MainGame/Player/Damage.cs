@@ -12,7 +12,6 @@ public class damage : MonoBehaviour
     public float cooldownTime = 2f;
     private bool cooldownActive = false;
     private float timer;
-
     private SpriteRenderer spriteRenderer;
     private SubPlayerController sub;
 
@@ -34,7 +33,6 @@ public class damage : MonoBehaviour
         if (!cooldownActive)
         {
             health--;
-            cooldownTimer = cooldownTime;
             cooldownActive = true;
             Debug.Log(health);
             if (health == 0)
