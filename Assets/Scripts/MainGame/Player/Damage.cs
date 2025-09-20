@@ -12,7 +12,6 @@ public class damage : MonoBehaviour
     public float cooldownTime = 2f;
     private bool cooldownActive = false;
     private float timer;
-    public Transform healthBar;
     private SpriteRenderer spriteRenderer;
     private SubPlayerController sub;
 
@@ -34,8 +33,6 @@ public class damage : MonoBehaviour
         if (!cooldownActive)
         {
             health--;
-            healthBar.localScale = new Vector3(healthBar.localScale.x - ((1 / 10) * healthBar.localScale.x), healthBar.localScale.y, healthBar.localScale.z);
-            healthBar.position = new Vector3(healthBar.position.x - (healthBar.localScale.x - ((1 / 10) * healthBar.localScale.x)), healthBar.position.y, healthBar.position.z);
             cooldownActive = true;
             Debug.Log(health);
             if (health == 0)
