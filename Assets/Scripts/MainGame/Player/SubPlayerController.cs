@@ -14,4 +14,10 @@ public class SubPlayerController : MonoBehaviour
     {
         rigidBody.AddForce(force);
     }
+
+    private void Update()
+    {
+        transform.rotation = Quaternion.Euler(0, 0,
+            Mathf.Rad2Deg * Mathf.Atan2(rigidBody.linearVelocityY, rigidBody.linearVelocityX));
+    }
 }

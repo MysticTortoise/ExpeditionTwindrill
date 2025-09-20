@@ -29,6 +29,7 @@ public class HandPlayerController : MonoBehaviour
     // Relational Objects
     private SubPlayerController sub;
     private Transform chainTransform;
+    private SpriteRenderer chainSprite;
 
     public void SetSub(SubPlayerController sub) { this.sub = sub; }
 
@@ -37,6 +38,7 @@ public class HandPlayerController : MonoBehaviour
     void Start()
     {
         chainTransform = transform.Find("Chain");
+        chainSprite = chainTransform.GetComponent<SpriteRenderer>();
         handCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
     }
@@ -47,7 +49,7 @@ public class HandPlayerController : MonoBehaviour
             Mathf.Rad2Deg * Mathf.Atan2(transform.position.y - sub.transform.position.y, transform.position.x - sub.transform.position.x) + 90);
         chainTransform.position = sub.transform.position + ((transform.position - sub.transform.position) / 2);
         chainTransform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
-        chainTransform.localScale = new Vector3(.5f, Vector3.Distance(transform.position, sub.transform.position), .5f);
+        chainSprite.size = new Vector2(.02f,Vector3.Distance(transform.position, sub.transform.position) / chainTransform.localScale.y);
     }
 
     // Update is called once per frame
