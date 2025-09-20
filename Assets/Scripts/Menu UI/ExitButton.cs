@@ -58,7 +58,11 @@ public class ExitButton : MonoBehaviour
         });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         //countdown & update timer
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
