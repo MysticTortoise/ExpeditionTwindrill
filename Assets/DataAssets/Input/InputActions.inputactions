@@ -1,15 +1,15 @@
 {
     "version": 1,
-    "name": "InputSystem_Actions",
+    "name": "InputActions",
     "maps": [
         {
-            "name": "MainGame",
-            "id": "0c38cacb-55da-4fed-ae96-3aaa72aee45b",
+            "name": "Main",
+            "id": "c6fe356e-e689-4e9d-b9e5-9b86cc67b3c8",
             "actions": [
                 {
-                    "name": "Mouse",
+                    "name": "Cursor",
                     "type": "Value",
-                    "id": "9631ed0e-3e33-411b-a347-52ee84b15a06",
+                    "id": "524416f5-b54b-4a24-81bf-243b214d5c26",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -18,7 +18,7 @@
                 {
                     "name": "Grab",
                     "type": "Button",
-                    "id": "5a01979f-a271-4c3f-9754-470df45e35f4",
+                    "id": "fc163b2d-b780-4f3a-a21d-e2c9d10f25bf",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -28,18 +28,18 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "eac191f6-f29f-4ad2-a6bf-21abcc4913a6",
+                    "id": "5d9408c0-6056-407a-8727-1008f64375f9",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Mouse",
+                    "groups": "",
+                    "action": "Cursor",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "414ba0f8-bf45-4d41-9094-cc74c44c8584",
+                    "id": "dbcecea1-91e3-4521-b58c-e9f288972193",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
