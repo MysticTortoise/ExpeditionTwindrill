@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TwoPointMovement : MonoBehaviour
 {
@@ -7,9 +8,13 @@ public class TwoPointMovement : MonoBehaviour
     [SerializeField] private float timeScale = 1;
     private Vector3 posA;
     [SerializeField] private Vector3 posB;
+    private SpriteRenderer renderer;
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        renderer = GetComponent<SpriteRenderer>();
         posA = transform.position;
         posB += posA;
     }
@@ -18,7 +23,17 @@ public class TwoPointMovement : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime / timeScale;
-        transform.position = Vector3.Lerp(posA, posB, MathUtil.Triangle(timer));
+        float alpha = MathUtil.Triangle(timer);
+        transform.position = Vector3.Lerp(posA, posB, alpha);
+        if (alpha >= .95)
+        {
+            renderer.flipX = true;
+        }
+        if (alpha <= .05)
+        {
+            renderer.flipX = false;
+        }
+        
     }
 #if UNITY_EDITOR
 
