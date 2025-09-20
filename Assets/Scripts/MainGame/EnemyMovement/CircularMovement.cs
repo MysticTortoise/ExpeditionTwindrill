@@ -1,45 +1,48 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CircleMovement : MonoBehaviour
 {
+public float timeScale;
+public float radius;
+public Rigidbody2D rb;
+private float timer;
 
-  public Rigidbody2D rb;
-    private float timer;
-    public float velocity;
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer <= 2.5)
+        timer += Time.deltaTime/timeScale;
+        float xValue = radius*Mathf.Cos(timer)/timeScale;
+        
+        float yValue = radius*Mathf.Sin(timer)/timeScale;
+        if (timer <= Math.PI/2)
         {
-            rb.linearVelocityX = velocity;
-            rb.linearVelocityY = velocity;
+            rb.linearVelocityX = xValue;
+            rb.linearVelocityY = yValue;
         }
-
-        if (timer > 2.5 && timer <= 5 )
+        else if (timer <= Math.PI)
         {
-            rb.linearVelocityX = -velocity;
-            rb.linearVelocityY = velocity;
+            rb.linearVelocityX = xValue;
+            rb.linearVelocityY = yValue;
         }
-
-        if (timer > 5 && timer <= 7.5)
+        else if (timer <= Math.PI*3/4)
         {
-            rb.linearVelocityX = -velocity;
-            rb.linearVelocityY = -velocity;
+            rb.linearVelocityX = xValue;
+            rb.linearVelocityY = yValue;
         }
-        if (timer > 7.5 && timer <= 10)
+        else if (timer <= Math.PI*2)
         {
-            rb.linearVelocityX =  velocity;
-            rb.linearVelocityY = -velocity;
+            rb.linearVelocityX = xValue;
+            rb.linearVelocityY = yValue;
         }
-        if (timer > 10)
+        else
         {
             timer = 0;
         }
-        Debug.Log(timer);
-    }
+    }   
     
 }
