@@ -46,6 +46,7 @@ public class PlayButton : MonoBehaviour
         playButton.transform.DOScale(0.9f, 0.15f).SetEase(Ease.OutExpo).OnComplete(() =>
         {
             playButton.transform.DOScale(hoverScale, 0.15f).SetEase(Ease.OutExpo);
+
         });
 
     }
