@@ -20,6 +20,8 @@ public class GrabbablePickup : GrabbableObject
         if (collider.gameObject.layer == LayerMask.NameToLayer("PlayerPickup"))
         {
             Pickup(collider.transform.parent.GetComponent<SubPlayerController>());
+            StoreCollectible.addCollectible();
+            StoreCollectible.getcollectibleCount();
         }
     }
 
