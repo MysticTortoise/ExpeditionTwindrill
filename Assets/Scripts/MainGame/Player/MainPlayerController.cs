@@ -7,6 +7,8 @@ public class MainPlayerController : MonoBehaviour
     private HandPlayerController hand;
     private SubPlayerController sub;
 
+    private bool gameOver = false;
+
 
     private Vector2 mouseGoalPos;
     private Vector2 mouseScreenPos;
@@ -24,6 +26,10 @@ public class MainPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameOver)
+        {
+            return;
+        }
         hand.goalPosition = playerCamera.ScreenToWorldPoint((Vector3)mouseScreenPos + new Vector3(0,0,5));
 
         playerCamera.transform.position = (Vector3)(Vector2)sub.transform.position + new Vector3(0, 0, playerCamera.transform.position.z);
@@ -43,5 +49,14 @@ public class MainPlayerController : MonoBehaviour
         {
             hand.Release();
         }
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("UH OH GAME OVER SAD");
+        Destroy(sub.gameObject);
+        Destroy(hand.gameObject);
+
+        gameOver = true;
     }
 }
