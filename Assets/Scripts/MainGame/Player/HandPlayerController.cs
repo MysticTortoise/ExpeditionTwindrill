@@ -34,6 +34,7 @@ public class HandPlayerController : MonoBehaviour
     private SubPlayerController sub;
     private Transform chainTransform;
     private SpriteRenderer chainSprite;
+    private BoxCollider2D chainCollider;
 
     public void SetSub(SubPlayerController sub) { this.sub = sub; }
 
@@ -43,6 +44,8 @@ public class HandPlayerController : MonoBehaviour
     {
         chainTransform = transform.Find("Chain");
         chainSprite = chainTransform.GetComponent<SpriteRenderer>();
+        chainCollider = chainTransform.GetComponent<BoxCollider2D>();
+
         handCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -57,6 +60,7 @@ public class HandPlayerController : MonoBehaviour
         chainTransform.position = sub.transform.position + ((transform.position - sub.transform.position) / 2);
         chainTransform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
         chainSprite.size = new Vector2(.02f,Vector3.Distance(transform.position, sub.transform.position) / chainTransform.localScale.y);
+        chainCollider.size = new Vector2(.04f, chainSprite.size.y);
 
         spriteRenderer.sprite = latched ? grabSprite : normalSprite;
         

@@ -55,42 +55,4 @@ public class SubPlayerController : MonoBehaviour
         spriteRenderer.flipX = spriteDirs[index].flipX;
     }
 
-
-#if UNITY_EDITOR
-
-    void OnDrawGizmos()
-    {
-        int quadrants = 8;
-        if (rigidBody == null)
-        {
-            rigidBody = GetComponent<Rigidbody2D>();
-        }
-
-        float myAngle = Mathf.Atan2(rigidBody.linearVelocityY, rigidBody.linearVelocityX);
-
-        Gizmos.color = new Color(0.75f, 0.0f, 0.0f, 0.75f);
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(Mathf.Cos(myAngle), Mathf.Sin(myAngle)));
-
-        myAngle *= RAD_TO_REV;
-        myAngle *= spriteDirs.Length;
-        int index = (int)Mathf.Round(myAngle);
-
-        myAngle = index * (360 / spriteDirs.Length) * Mathf.Deg2Rad;
-
-        Gizmos.color = new Color(0.0f, 0.0f, 0.75f, 0.75f);
-        Gizmos.DrawLine(transform.position,  transform.position + new Vector3(Mathf.Cos(myAngle), Mathf.Sin(myAngle)));
-
-        Gizmos.color = new Color(0.0f, 0.75f, 0.0f, 0.75f);
-        
-       
-
-        for(int i = 0; i < quadrants; i++)
-        {
-            float beginAngle = Mathf.Deg2Rad * (i * (360f / quadrants) + .5f * (360f / quadrants));
-            Gizmos.DrawLine(transform.position,
-                transform.position + new Vector3(Mathf.Cos(beginAngle), Mathf.Sin(beginAngle))
-                );
-        }
-    }
-#endif
 }
