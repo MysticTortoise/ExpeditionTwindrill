@@ -1,10 +1,7 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class SubPlayerController : MonoBehaviour
 {
-    private Camera camera;
-    private Vector2 mouseGoalPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,11 +10,6 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-    }
-
-    public  void CursorUpdate(InputAction.CallbackContext context)
     {
         
     }
