@@ -71,8 +71,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.21}
-    newSize: {x: 0.32, y: 0.21}
+    oldSize: {x: 0.34, y: 0.34}
+    newSize: {x: 0.34, y: 0.34}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -122,13 +122,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1979141608085551198, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+  m_SortingOrder: 50
+  m_Sprite: {fileID: -1880536561, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.21}
+  m_Size: {x: 0.34, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 2330660189743773108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.14, y: -0.096, z: 0}
   m_LocalScale: {x: 1.6940566, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -270,6 +270,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a3f93c7990a7e4192819faa58d70a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteDirs:
+  - sprites:
+    - {fileID: 2094649773, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: -1998026107, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 0
+  - sprites:
+    - {fileID: 909235511, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: -1017318341, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 0
+  - sprites:
+    - {fileID: -518613225, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: 2102512709, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 0
+  - sprites:
+    - {fileID: 909235511, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: -1017318341, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 1
+  - sprites:
+    - {fileID: 2094649773, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: -1998026107, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 1
+  - sprites:
+    - {fileID: -899570643, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: 1550361001, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 1
+  - sprites:
+    - {fileID: -1880536561, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: -951978835, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 0
+  - sprites:
+    - {fileID: -899570643, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    - {fileID: 1550361001, guid: d3be59fd6c2230b4a9caeb28c49d0618, type: 3}
+    flipX: 0
+  animateTime: 0.5
 --- !u!50 &2795029247487994376
 Rigidbody2D:
   serializedVersion: 5
@@ -393,7 +427,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.85
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -536,7 +570,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 48
   m_Sprite: {fileID: 2748650920590229869, guid: 8399647acd9d9d642bf851fb58161223, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -627,8 +661,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 49
+  m_Sprite: {fileID: -5705751737038163552, guid: f0a3c605c4705c64592d9cd22175721e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -654,6 +688,7 @@ MonoBehaviour:
   MaxArmDist: 23.09
   PullMoveAcceleration: 300
   HandAccel: 5000
+  grabSprite: {fileID: -1919680935, guid: f0a3c605c4705c64592d9cd22175721e, type: 3}
   goalPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &281355874730691724
 BoxCollider2D:

@@ -7,6 +7,7 @@ public class MainPlayerController : MonoBehaviour
     private HandPlayerController hand;
     private SubPlayerController sub;
 
+
     private Vector2 mouseGoalPos;
     private Vector2 mouseScreenPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,6 +17,7 @@ public class MainPlayerController : MonoBehaviour
         hand = transform.Find("Hand").GetComponent<HandPlayerController>();
         sub = transform.Find("Sub").GetComponent<SubPlayerController>();
 
+
         hand.SetSub(sub);
     }
 
@@ -23,6 +25,8 @@ public class MainPlayerController : MonoBehaviour
     void Update()
     {
         hand.goalPosition = playerCamera.ScreenToWorldPoint((Vector3)mouseScreenPos + new Vector3(0,0,5));
+
+        playerCamera.transform.position = (Vector3)(Vector2)sub.transform.position + new Vector3(0, 0, playerCamera.transform.position.z);
     }
 
     public void CursorUpdate(InputAction.CallbackContext context)
