@@ -9,11 +9,13 @@ public class CircleMovement : MonoBehaviour
     private float timer = 0;
     public float timeScale;
     public float radius;
+    [Range(0,Mathf.PI*2)] public float offset;
     private Vector3 originPoint;
 
     private void Start()
     {
         originPoint = transform.position;
+        timer = offset;
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class CircleMovement : MonoBehaviour
     {
         timer += Time.deltaTime / timeScale;
         transform.position = originPoint + new Vector3(
-            Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius
+            Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius * 0.5f
             );
     }
 
@@ -30,6 +32,8 @@ public class CircleMovement : MonoBehaviour
         Gizmos.color = Color.red;
 
         Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + new Vector3(Mathf.Cos(offset), Mathf.Sin(offset)) * radius);
     }
 
 }
