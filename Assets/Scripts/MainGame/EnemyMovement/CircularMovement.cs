@@ -23,7 +23,7 @@ public class CircleMovement : MonoBehaviour
     {
         timer += Time.deltaTime / timeScale;
         transform.position = originPoint + new Vector3(
-            Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius * 0.5f
+            Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius
             );
     }
 
