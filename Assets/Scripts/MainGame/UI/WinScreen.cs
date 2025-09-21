@@ -3,16 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
+
+
     public void NextLevel()
     {
         string curLevelName = SceneManager.GetActiveScene().name;
-        for(int i = 0; i < LevelOrder.levels.Length-1; i++)
+        int levelNumber = int.Parse(curLevelName.Replace("Level", ""));
+        levelNumber++;
+        int nextLevelIndex = SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/Levels/Level" + levelNumber.ToString() + ".unity");
+        if (nextLevelIndex != -1)
         {
-            if (LevelOrder.levels[i] == curLevelName)
-            {
-                SceneManager.LoadScene(LevelOrder.levels[i+1]);
-                return;
-            }
+            SceneManager.LoadScene(nextLevelIndex);
+            return;
         }
         MusicHandler.StopMusic();
         MainMenu();
