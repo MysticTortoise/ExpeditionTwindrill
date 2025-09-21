@@ -13,7 +13,7 @@ public class WinScreen : MonoBehaviour
         int nextLevelIndex = SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/Levels/Level" + levelNumber.ToString() + ".unity");
         if (nextLevelIndex != -1)
         {
-            SceneManager.LoadScene(nextLevelIndex);
+            WipeTransition.SceneTransition("Level" + levelNumber);
             return;
         }
         MusicHandler.StopMusic();
@@ -22,7 +22,7 @@ public class WinScreen : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        WipeTransition.SceneTransition("MainMenu");
         MusicHandler.StopMusic();
     }
 }

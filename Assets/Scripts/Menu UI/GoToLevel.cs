@@ -7,6 +7,6 @@ public class GoToLevel : MonoBehaviour
     
     public void goToLevel()
     {
-        SceneManager.LoadScene("Level" + button.name);
+        WipeTransition.SceneTransition("Level" + button.name);
     }
 }

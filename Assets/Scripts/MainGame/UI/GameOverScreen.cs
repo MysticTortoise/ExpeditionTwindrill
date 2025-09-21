@@ -5,12 +5,12 @@ public class GameOverScreen : MonoBehaviour
 {
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        WipeTransition.SceneTransition(SceneManager.GetActiveScene().name);
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        WipeTransition.SceneTransition("MainMenu");
         MusicHandler.StopMusic();
     }
 }
