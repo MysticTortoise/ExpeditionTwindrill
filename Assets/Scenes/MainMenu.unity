@@ -2042,6 +2042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1024353746}
   - component: {fileID: 1024353748}
+  - component: {fileID: 1024353749}
   - component: {fileID: 1024353747}
   m_Layer: 5
   m_Name: Soli Yan
@@ -2089,12 +2090,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Soli Y.
+  m_text: '<link="https://solomony12.itch.io/"><u><color=#C7D2FD>Soli Y.</link></u></color>
 
     <size=10><i>@iveseanyori</i>
 
-    <size=12>Lead Character/UI
-    Art'
+    <size=12>Lead
+    Character/UI Art'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e61e1425762d3478c8fee5dcef5c16, type: 2}
   m_sharedMaterial: {fileID: -6358291441603493241, guid: 95e61e1425762d3478c8fee5dcef5c16, type: 2}
@@ -2173,6 +2174,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024353745}
   m_CullTransparentMesh: 1
+--- !u!114 &1024353749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024353745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eaa21e679cc7544784904ee373ccd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1024353747}
 --- !u!1 &1047825558
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,6 +4100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800638575}
   - component: {fileID: 1800638577}
+  - component: {fileID: 1800638578}
   - component: {fileID: 1800638576}
   m_Layer: 5
   m_Name: Thatcher M
@@ -4133,7 +4148,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thatcher Mollerup
+  m_text: '<link="https://cilantro-lime-rice.itch.io/"><u><color=#C7D2FD>Thatcher
+    Mollerup</link></u></color>
 
     <size=10><i>@thatcherm_60119</i>
 
@@ -4217,6 +4233,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800638574}
   m_CullTransparentMesh: 1
+--- !u!114 &1800638578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800638574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eaa21e679cc7544784904ee373ccd57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1800638576}
 --- !u!1 &1897369709
 GameObject:
   m_ObjectHideFlags: 0
