@@ -139,6 +139,7 @@ public class HandPlayerController : MonoBehaviour
     public void Shock()
     {
         shockTimer = damageHandler.cooldownTime;
+
     }
 
     void OnTriggerEnter2D(Collider2D collider)
