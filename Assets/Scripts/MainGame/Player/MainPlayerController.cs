@@ -68,6 +68,6 @@ public class MainPlayerController : MonoBehaviour
     public void Victory()
     {
         GetComponent<PlayerInput>().enabled = false;
-        GetComponent<DamageHandler>().invincible = true;
+        sub.GetComponent<DamageHandler>().invincible = true;
     }
 }
