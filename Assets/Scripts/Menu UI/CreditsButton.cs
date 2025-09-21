@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 using System.Collections;
+using Unity.VisualScripting;
 
 /// <summary>
 /// script for credits button & credits menu
@@ -24,6 +25,13 @@ public class CreditsButton : MonoBehaviour
 
     [SerializeField] Button[] buttonsToModify; //buttons in this list will "move out of the way" when credits menu is opened
 
+    Vector2 panelOriginalPos;
+
+    private void Start()
+    {
+        panelOriginalPos = creditsPanel.rectTransform.anchoredPosition;
+
+    }
 
     public void OnClick()
     {
@@ -60,7 +68,7 @@ public class CreditsButton : MonoBehaviour
         isAnimating = true;
         var credBtnTransform = creditsButton.transform;
 
-
+        creditsPanel.rectTransform.anchoredPosition = panelOriginalPos;
         panelGroup.transform.localScale = new Vector2(.9f, .9f);
         panelGroup.alpha = 0f;
 
@@ -133,12 +141,13 @@ public class CreditsButton : MonoBehaviour
         DOTween.Kill(creditsPanel.rectTransform);
         var sequence = DOTween.Sequence();
         sequence.Join(creditsPanel.transform.DOScale(0.05f, panelExpandDuration).SetEase(Ease.OutCubic));
-        sequence.Append(creditsPanel.rectTransform.DOAnchorPos(new Vector2(creditsButton.image.rectTransform.anchoredPosition.x, creditsButton.image.rectTransform.anchoredPosition.y), panelExpandDuration)).SetEase(Ease.OutQuint);
-        //sequence.Append(creditsPanel.transform.DOMoveX(creditsButton.image.rectTransform.anchoredPosition.x + 90, panelExpandDuration)).SetEase(Ease.OutQuint);
 
-        //this is the most dogshit code i've ever written but it works so whatever
+        sequence.Append(creditsPanel.rectTransform.DOMoveX(creditsButton.image.rectTransform.position.x,panelExpandDuration)).SetEase(Ease.OutQuint);
+        //this singular line of code ruined my life but at least it's working now
 
         yield return new WaitForSeconds(panelExpandDuration / 1.9f);
+        creditsPanel.gameObject.SetActive(false);
+
 
         //make it so it seems like the credits button is pushed back by the panel
         var credBtnFinalSequence = DOTween.Sequence();
@@ -150,7 +159,6 @@ public class CreditsButton : MonoBehaviour
 
         isAnimating = false;
         buttonMode = 0; //set to close
-        creditsPanel.gameObject.SetActive(false);
         foreach (Button button in buttonsToModify)
         {
             button.interactable = true;
