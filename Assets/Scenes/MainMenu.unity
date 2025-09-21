@@ -4188,7 +4188,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 1965575370}
   hoverScale: 1.25
-  buttonToDisable: []
+  buttonToDisable:
+  - {fileID: 628021727}
+  - {fileID: 1047825560}
+  - {fileID: 119886435}
 --- !u!1001 &1394261462696644277
 PrefabInstance:
   m_ObjectHideFlags: 0

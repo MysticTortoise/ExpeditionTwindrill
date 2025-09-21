@@ -133,12 +133,14 @@ public class CreditsButton : MonoBehaviour
         DOTween.Kill(creditsPanel.rectTransform);
         var sequence = DOTween.Sequence();
         sequence.Join(creditsPanel.transform.DOScale(0.05f, panelExpandDuration).SetEase(Ease.OutCubic));
-        sequence.Append(creditsPanel.transform.DOMoveX(credBtnTransform.position.x + 90, panelExpandDuration)).SetEase(Ease.OutQuint);
+        sequence.Append(creditsPanel.rectTransform.DOAnchorPos(new Vector2(creditsButton.image.rectTransform.anchoredPosition.x, creditsButton.image.rectTransform.anchoredPosition.y), panelExpandDuration)).SetEase(Ease.OutQuint);
+        //sequence.Append(creditsPanel.transform.DOMoveX(creditsButton.image.rectTransform.anchoredPosition.x + 90, panelExpandDuration)).SetEase(Ease.OutQuint);
 
         //this is the most dogshit code i've ever written but it works so whatever
 
         yield return new WaitForSeconds(panelExpandDuration / 1.9f);
 
+        //make it so it seems like the credits button is pushed back by the panel
         var credBtnFinalSequence = DOTween.Sequence();
         credBtnFinalSequence.Append(credBtnTransform.DOMoveX(credBtnTransform.position.x + buttonMoveAmount, buttonMoveDuration)).SetEase(Ease.OutCubic);
         credBtnFinalSequence.Append(credBtnTransform.DOScale(1f, buttonMoveDuration)).SetEase(Ease.OutExpo);
@@ -154,6 +156,6 @@ public class CreditsButton : MonoBehaviour
             button.interactable = true;
         }
 
-        creditsPanel.transform.position = new Vector2(credBtnTransform.position.x - 180f, credBtnTransform.position.y);
+        creditsPanel.transform.position = new Vector2(creditsButton.image.rectTransform.anchoredPosition.x - 180f, credBtnTransform.position.y);
     }
 }
