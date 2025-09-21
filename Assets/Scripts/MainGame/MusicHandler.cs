@@ -8,14 +8,19 @@ public class MusicHandler : MonoBehaviour
     {
         if (instance != null)
         {
-            Destroy(this.gameObject);
-            return;
+            if(GetComponent<AudioSource>().clip != instance.GetComponent<AudioSource>().clip)
+            {
+                Destroy(instance);
+                
+            } else
+            {
+                Destroy(this.gameObject);
+                return;
+            }
         }
         instance = this;
         transform.parent = null;
         DontDestroyOnLoad(this.gameObject);
-        
-        
     }
 
     public static void StopMusic()

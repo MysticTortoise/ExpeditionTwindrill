@@ -61,7 +61,9 @@ public class PlayButton : MonoBehaviour
         yield return playButton.transform.DOScale(0.9f, 0.15f).SetEase(Ease.OutExpo).WaitForCompletion();
         yield return playButton.transform.DOScale(hoverScale, 0.15f).SetEase(Ease.OutExpo).WaitForCompletion();
 
+        WipeTransition.SceneTransition("Level Select");
+
         //load the game scene here
-        SceneManager.LoadScene("Level Select");
+        //SceneManager.LoadScene("Level Select");
     }
 }
