@@ -3112,11 +3112,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Andy Jia
+  m_text: '<a href="https://rmfandyplayz.com/">Andy Jia</a>
 
     <size=10><i>@rmfandyplayz</i>
 
-    <size=12>UI Programming/Design'
+    <size=12>UI
+    Programming/Design'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e61e1425762d3478c8fee5dcef5c16, type: 2}
   m_sharedMaterial: {fileID: -6358291441603493241, guid: 95e61e1425762d3478c8fee5dcef5c16, type: 2}
@@ -3631,7 +3632,7 @@ RectTransform:
   m_GameObject: {fileID: 1502574071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.0000001}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1378921681}
