@@ -25,17 +25,12 @@ public class WipeTransition : MonoBehaviour
         animator.SetBool("WipeIn", false);
         animator.SetTrigger("Go");
 
-        Debug.Log("GO TRANSITION");
-
         yield return new WaitForEndOfFrame();
-
-        Debug.Log("WAIT FOR ANIM");
 
         while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Decide"))
         {
             yield return null;
         }
-        Debug.Log("LOAD SCENE");
 
         AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneName);
 

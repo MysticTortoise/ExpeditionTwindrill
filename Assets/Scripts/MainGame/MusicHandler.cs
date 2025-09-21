@@ -10,7 +10,7 @@ public class MusicHandler : MonoBehaviour
         {
             if(GetComponent<AudioSource>().clip != instance.GetComponent<AudioSource>().clip)
             {
-                Destroy(instance);
+                Destroy(instance.gameObject);
                 
             } else
             {

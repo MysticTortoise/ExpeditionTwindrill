@@ -34,7 +34,6 @@ public class damage : MonoBehaviour
         {
             health--;
             cooldownActive = true;
-            Debug.Log(health);
             if (health == 0)
             {
                 SceneManager.LoadScene("GameOver");

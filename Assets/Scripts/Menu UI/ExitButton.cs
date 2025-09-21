@@ -35,7 +35,6 @@ public class ExitButton : MonoBehaviour
         }
         else if (exitGame == true)
         {
-            Debug.Log("goodbye!");
             Application.Quit();
         }
     }

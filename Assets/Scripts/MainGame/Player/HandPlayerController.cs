@@ -86,7 +86,6 @@ public class HandPlayerController : MonoBehaviour
         {
             shockTimer -= Time.deltaTime;
         }
-        //Debug.Log(latched);
         if (latched)
         {
             rigidBody.linearVelocity = new Vector3();

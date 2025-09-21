@@ -30,12 +30,10 @@ public class StoreCollectible : MonoBehaviour
     }
     public void GetCollectibleCount()
     {
-        Debug.Log(collectibles);
     }
 
     private void Win()
     {
         FindAnyObjectByType<PlayerUI>().ShowWin();
-        Debug.Log("YOU WIN!!! :D");
     }
 }
