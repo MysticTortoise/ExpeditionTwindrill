@@ -15,7 +15,7 @@ TagManager:
   - PlayerCollision
   - WallCollision
   - PickupCollision
-  - 
+  - EnemyCollision
   - 
   - 
   - 

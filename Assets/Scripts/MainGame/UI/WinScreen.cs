@@ -17,7 +17,7 @@ public class WinScreen : MonoBehaviour
             return;
         }
         MusicHandler.StopMusic();
-        MainMenu();
+        WipeTransition.SceneTransition("GameWin");
     }
 
     public void MainMenu()
