@@ -8,6 +8,7 @@ public class HandPlayerController : MonoBehaviour
     private BoxCollider2D handCollider;
     private Rigidbody2D rigidBody;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     // Properties
     [SerializeField] private float MaxArmDist;
@@ -15,7 +16,6 @@ public class HandPlayerController : MonoBehaviour
     [SerializeField] private float PullMoveAcceleration;
     [SerializeField] private float HandAccel;
 
-    [SerializeField] private Sprite grabSprite;
     private Sprite normalSprite;
 
     // Internal trackers
@@ -28,15 +28,18 @@ public class HandPlayerController : MonoBehaviour
     private GrabbableObject? latchedObject = null;
     private bool movePull = false;
 
+    private float shockTimer;
+
     private bool latched { get { return latchedObject != null; } }
     
     // Relational Objects
     private SubPlayerController sub;
+    private DamageHandler damageHandler;
     private Transform chainTransform;
     private SpriteRenderer chainSprite;
     private BoxCollider2D chainCollider;
 
-    public void SetSub(SubPlayerController sub) { this.sub = sub; }
+    public void SetSub(SubPlayerController sub) { this.sub = sub; damageHandler = sub.GetComponent<DamageHandler>(); }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,6 +52,7 @@ public class HandPlayerController : MonoBehaviour
         handCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         normalSprite = spriteRenderer.sprite;
     }
@@ -62,13 +66,18 @@ public class HandPlayerController : MonoBehaviour
         chainSprite.size = new Vector2(.02f,Vector3.Distance(transform.position, sub.transform.position) / chainTransform.localScale.y);
         chainCollider.size = new Vector2(.04f, chainSprite.size.y);
 
-        spriteRenderer.sprite = latched ? grabSprite : normalSprite;
+        animator.SetBool("Grab", latched);
+        animator.SetBool("Shock", shockTimer > 0);
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(shockTimer > 0)
+        {
+            shockTimer -= Time.deltaTime;
+        }
         //Debug.Log(latched);
         if (latched)
         {
@@ -115,6 +124,11 @@ public class HandPlayerController : MonoBehaviour
     public void Release()
     {
         latchedObject = null;
+    }
+
+    public void Shock()
+    {
+        shockTimer = damageHandler.cooldownTime;
     }
 
     void OnTriggerEnter2D(Collider2D collider)

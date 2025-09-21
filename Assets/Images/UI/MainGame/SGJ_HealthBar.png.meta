@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c6916343b9f8fa54f9d606cbfd28c6ec
+guid: a415632271a46a44eab53f58bb729cc4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1789209731453685957
-    second: Tile_Diagonal_Bad_0
+      213: 3444461482883331301
+    second: SGJ_HealthBar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,27 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile_Diagonal_Bad_0
+      name: SGJ_HealthBar_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 57
-        height: 57
+        width: 256
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 28.5, y: 28.5}
-        - {x: -12.5, y: -6.5}
-        - {x: -28.5, y: -28.5}
-        - {x: 28.5, y: -28.5}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: b3fe7089a337b27e0800000000000000
-      internalID: -1789209731453685957
+      spriteID: 5e4b6c9187f2dcf20800000000000000
+      internalID: 3444461482883331301
       vertices: []
       indices: 
       edges: []
@@ -129,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6e225b1a68c2f374c9ae28ed5b274805
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -139,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tile_Diagonal_Bad_0: -1789209731453685957
+      SGJ_HealthBar_0: 3444461482883331301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

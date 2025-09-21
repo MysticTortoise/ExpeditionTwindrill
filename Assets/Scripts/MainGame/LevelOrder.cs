@@ -2,7 +2,9 @@ public class LevelOrder
 {
     public static string[] levels =
     {
-        "Level1_Basics",
-        "Level2_GayFurry",
+        "Level1",
+        "Level2",
+        "Level3",
+        "Level4",
     };
 }

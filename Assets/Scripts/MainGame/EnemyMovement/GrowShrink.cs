@@ -19,4 +19,14 @@ public class GrowShrink : MonoBehaviour
         enemy.localScale = new Vector3(size, size, size);
     
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+
+        float spriteSize = GetComponent<CircleCollider2D>().radius;
+
+        Gizmos.DrawWireSphere(transform.position, sizeMin * spriteSize);
+        Gizmos.DrawWireSphere(transform.position, sizeMax * spriteSize);
+    }
 }
