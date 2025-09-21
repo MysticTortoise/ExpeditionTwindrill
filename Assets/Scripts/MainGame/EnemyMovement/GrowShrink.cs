@@ -10,11 +10,12 @@ public class GrowShrink : MonoBehaviour
     private float timer;
     public float sizeMin;
     public float sizeMax;
+    public float speed = 1;
 
 
     void Update()
     {
-        timer += Time.deltaTime;
+        timer += Time.deltaTime * speed;
         float size = Mathf.Lerp(sizeMin, sizeMax, Math.Abs(Mathf.Sin(timer)));
         enemy.localScale = new Vector3(size, size, size);
     

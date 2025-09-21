@@ -39,6 +39,10 @@ public class HandPlayerController : MonoBehaviour
     private SpriteRenderer chainSprite;
     private BoxCollider2D chainCollider;
 
+    private AudioSource chainLoop;
+    private AudioSource grabWallSound;
+    private AudioSource grabItemSound;
+
     public void SetSub(SubPlayerController sub) { this.sub = sub; damageHandler = sub.GetComponent<DamageHandler>(); }
 
 
@@ -48,6 +52,10 @@ public class HandPlayerController : MonoBehaviour
         chainTransform = transform.Find("Chain");
         chainSprite = chainTransform.GetComponent<SpriteRenderer>();
         chainCollider = chainTransform.GetComponent<BoxCollider2D>();
+        chainLoop = chainTransform.GetComponent<AudioSource>();
+
+        grabWallSound = transform.Find("GrabWallSound").GetComponent<AudioSource>();
+        grabItemSound = transform.Find("GrabItemSound").GetComponent<AudioSource>();
 
         handCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
@@ -68,7 +76,7 @@ public class HandPlayerController : MonoBehaviour
 
         animator.SetBool("Grab", latched);
         animator.SetBool("Shock", shockTimer > 0);
-        
+        chainLoop.mute = !latched;
     }
 
     // Update is called once per frame
@@ -112,11 +120,13 @@ public class HandPlayerController : MonoBehaviour
             {
                 latchedObject = wall;
                 movePull = true;
+                grabWallSound.PlayOneShot(grabWallSound.clip);
             }
             if(obj is GrabbablePickup pickup)
             {
                 latchedObject = pickup;
                 movePull = false;
+                grabItemSound.PlayOneShot(grabItemSound.clip);
             }
         }
     }

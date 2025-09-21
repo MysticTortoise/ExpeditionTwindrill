@@ -3,7 +3,6 @@ using UnityEngine;
 public class GrabbablePickup : GrabbableObject
 {
     public float PullAcceleration;
-
     private Rigidbody2D rigidBody;
     private void Start()
     {
@@ -14,7 +13,6 @@ public class GrabbablePickup : GrabbableObject
     {
         rigidBody.AddForce(force);
     }
-
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.layer == LayerMask.NameToLayer("PlayerPickup"))

@@ -11,5 +11,6 @@ public class GameOverScreen : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        MusicHandler.StopMusic();
     }
 }
