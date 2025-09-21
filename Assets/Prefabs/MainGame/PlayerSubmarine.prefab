@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageForce: 400
-  health: 3
+  health: 4
   collider: {fileID: 9134923875678206688}
   cooldownTime: 2
   invincible: 0
