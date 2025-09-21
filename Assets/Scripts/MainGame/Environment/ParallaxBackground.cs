@@ -4,7 +4,7 @@ public class ParallaxBackground : MonoBehaviour
 {
     private Material material;
     [SerializeField] private new Camera camera;
-    [SerializeField] private float scrollModifier;
+    [SerializeField] private Vector2 scrollModifier;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

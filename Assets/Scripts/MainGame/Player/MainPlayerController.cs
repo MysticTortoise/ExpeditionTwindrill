@@ -37,7 +37,11 @@ public class MainPlayerController : MonoBehaviour
 
     public void CursorUpdate(InputAction.CallbackContext context)
     {
-        mouseScreenPos = context.ReadValue<Vector2>();
+        Vector2 val = context.ReadValue<Vector2>();
+        if(val.y != 0 && val.x != 0)
+        {
+            mouseScreenPos = val;
+        }
     }
 
     public void GrabInput(InputAction.CallbackContext context)
@@ -59,5 +63,11 @@ public class MainPlayerController : MonoBehaviour
         FindAnyObjectByType<PlayerUI>().ShowGameOver();
 
         gameOver = true;
+    }
+
+    public void Victory()
+    {
+        GetComponent<PlayerInput>().enabled = false;
+        GetComponent<DamageHandler>().invincible = true;
     }
 }

@@ -23,6 +23,13 @@ public class CircleMovement : MonoBehaviour
         transform.position = originPoint + new Vector3(
             Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius
             );
-    }   
-    
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
 }

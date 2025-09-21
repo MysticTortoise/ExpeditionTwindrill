@@ -14,13 +14,19 @@ public class DamageHandler : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private SubPlayerController sub;
 
+    public bool invincible = false;
+
     private Animator animator;
+
+    private AudioSource hitSound;
 
     private void Start()
     {
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         sub = GetComponent<SubPlayerController>();
         animator = GetComponent<Animator>();
+
+        hitSound = transform.Find("HitSound").GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -30,13 +36,13 @@ public class DamageHandler : MonoBehaviour
         
     }
 
-    public void TakeDamage(Vector2 hitPoint)
+    public void TakeDamage(Vector2 hitPoint, float forceMult = 1)
     {
+        if (invincible) { return; }
         if (!cooldownActive)
         {
             health--;
             cooldownTimer = cooldownTime;
-            Debug.Log(health);
             if (health == 0)
             {
                 FindAnyObjectByType<MainPlayerController>().GameOver();
@@ -45,7 +51,9 @@ public class DamageHandler : MonoBehaviour
             Vector2 dir = hitPoint - (Vector2)transform.position;
             dir.Normalize();
             dir *= -damageForce;
-            sub.AddForce(dir);
+            sub.AddForce(dir * forceMult);
+
+            hitSound.Play();
         }
     }
 

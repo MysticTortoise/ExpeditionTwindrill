@@ -14,11 +14,13 @@ public class WinScreen : MonoBehaviour
                 return;
             }
         }
+        MusicHandler.StopMusic();
         MainMenu();
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        MusicHandler.StopMusic();
     }
 }

@@ -15,7 +15,7 @@ public class HandOuchy : MonoBehaviour
     {
         if(collision.GetComponent<DontTouch>() != null)
         {
-            damageHandler.TakeDamage(transform.position);
+            damageHandler.TakeDamage(transform.position, 0.5f);
             hand.Shock();
         }
     }
