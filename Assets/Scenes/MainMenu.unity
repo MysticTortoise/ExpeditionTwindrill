@@ -4188,6 +4188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 1965575370}
   hoverScale: 1.25
+<<<<<<< HEAD
   buttonToDisable:
   - {fileID: 628021727}
   - {fileID: 1047825560}
@@ -4289,11 +4290,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d01edeb3cab04c146a8cecaa829d0f0e, type: 3}
+=======
+  buttonToDisable: []
+>>>>>>> 0cb85169 (uhh stuff)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1394261462696644277}
   - {fileID: 118785622}
   - {fileID: 1084904891}
   - {fileID: 1337348471}

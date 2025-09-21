@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4992683894922073210}
   - component: {fileID: 87719404216141799}
   - component: {fileID: 5866618692105368525}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.1}
+    oldSize: {x: 0.24, y: 0.09}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -190,3 +190,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeScale: 1
   radius: 2
+  offset: 0

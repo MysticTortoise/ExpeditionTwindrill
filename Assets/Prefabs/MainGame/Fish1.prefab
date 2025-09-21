@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4141767703170212788}
   - component: {fileID: 6304083141362796777}
   - component: {fileID: 2196878709743327540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fish1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.11}
+    oldSize: {x: 0.16, y: 0.09}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
