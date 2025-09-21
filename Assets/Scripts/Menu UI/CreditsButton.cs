@@ -60,7 +60,7 @@ public class CreditsButton : MonoBehaviour
         isAnimating = true;
         var credBtnTransform = creditsButton.transform;
 
-        panelGroup.transform.localScale = new Vector2(.85f, .85f);
+        panelGroup.transform.localScale = new Vector2(.9f, .9f);
         panelGroup.alpha = 0f;
 
         //disable other buttons while animating
@@ -99,7 +99,7 @@ public class CreditsButton : MonoBehaviour
         //scale button back
         yield return DOTween.Sequence().Append(credBtnTransform.DOScale(1f, buttonMoveDuration).SetEase(Ease.OutExpo))
                                        .Join(panelGroup.DOFade(1, buttonMoveDuration))
-                                       .Join(panelGroup.transform.DOScale(1, buttonMoveDuration))
+                                       .Join(panelGroup.transform.DOScale(1, buttonMoveDuration)).SetEase(Ease.OutQuint)
                                        .WaitForCompletion();
        
         isAnimating = false;
@@ -114,7 +114,10 @@ public class CreditsButton : MonoBehaviour
         //button animation (expand, move right a bit, then contract)
         DOTween.Kill(credBtnTransform);
         var buttonSequence = DOTween.Sequence();
-        buttonSequence.Append(credBtnTransform.DOScale(buttonExpandFactor * 1.15f, buttonMoveDuration)).SetEase(Ease.OutBack);
+        yield return buttonSequence.Append(credBtnTransform.DOScale(buttonExpandFactor * 1.15f, buttonMoveDuration)).SetEase(Ease.OutBack)
+                                   .Join(panelGroup.DOFade(0, buttonMoveDuration))
+                                   .Join(panelGroup.transform.DOScale(0.9f, buttonMoveDuration))
+                                   .WaitForCompletion();
 
         //move other buttons to the right a little bit, reduce their opacity, and reduce size
         var sideBtnSequence = DOTween.Sequence();
