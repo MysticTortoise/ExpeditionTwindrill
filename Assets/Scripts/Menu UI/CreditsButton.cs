@@ -60,6 +60,7 @@ public class CreditsButton : MonoBehaviour
         isAnimating = true;
         var credBtnTransform = creditsButton.transform;
 
+
         panelGroup.transform.localScale = new Vector2(.9f, .9f);
         panelGroup.alpha = 0f;
 
@@ -131,16 +132,19 @@ public class CreditsButton : MonoBehaviour
         //tween to hide the panel
         DOTween.Kill(creditsPanel.rectTransform);
         var sequence = DOTween.Sequence();
-        sequence.Join(creditsPanel.transform.DOScale(0, panelExpandDuration).SetEase(Ease.OutCubic));
+        sequence.Join(creditsPanel.transform.DOScale(0.05f, panelExpandDuration).SetEase(Ease.OutCubic));
+        sequence.Append(creditsPanel.transform.DOMoveX(credBtnTransform.position.x + 90, panelExpandDuration)).SetEase(Ease.OutQuint);
 
-        yield return new WaitForSeconds(panelExpandDuration / 1.5f);
+        //this is the most dogshit code i've ever written but it works so whatever
+
+        yield return new WaitForSeconds(panelExpandDuration / 1.9f);
 
         var credBtnFinalSequence = DOTween.Sequence();
         credBtnFinalSequence.Append(credBtnTransform.DOMoveX(credBtnTransform.position.x + buttonMoveAmount, buttonMoveDuration)).SetEase(Ease.OutCubic);
-        credBtnFinalSequence.Append(credBtnTransform.DOMoveX(credBtnTransform.position.x, buttonMoveDuration)).SetEase(Ease.OutCubic);
-        credBtnFinalSequence.Join(credBtnTransform.DOScale(1f, buttonMoveDuration)).SetEase(Ease.OutBack);
+        credBtnFinalSequence.Append(credBtnTransform.DOScale(1f, buttonMoveDuration)).SetEase(Ease.OutExpo);
+        credBtnFinalSequence.Append(credBtnTransform.DOMoveX(credBtnTransform.position.x, .9f)).SetEase(Ease.OutQuad);
 
-        yield return sequence.WaitForCompletion();
+        yield return credBtnFinalSequence.WaitForCompletion();
 
         isAnimating = false;
         buttonMode = 0; //set to close
@@ -149,5 +153,7 @@ public class CreditsButton : MonoBehaviour
         {
             button.interactable = true;
         }
+
+        creditsPanel.transform.position = new Vector2(credBtnTransform.position.x - 180f, credBtnTransform.position.y);
     }
 }
