@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 2fb9f11364943be48b9d3f340d5c5d3a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5791223785262166688
+    second: TeaspoonStudiosLogo2024_0
+  - first:
+      213: -4920749957789333363
+    second: TeaspoonStudiosLogo2024_1
+  - first:
+      213: 7211766767515580518
+    second: TeaspoonStudiosLogo2024_2
+  - first:
+      213: 3552929365824803952
+    second: TeaspoonStudiosLogo2024_3
+  - first:
+      213: -1395841523996071510
+    second: TeaspoonStudiosLogo2024_4
+  - first:
+      213: 4385146634123009753
+    second: TeaspoonStudiosLogo2024_5
+  - first:
+      213: 2985424336928283819
+    second: TeaspoonStudiosLogo2024_6
+  - first:
+      213: -7311010064244448547
+    second: TeaspoonStudiosLogo2024_7
+  - first:
+      213: -9222666184061010347
+    second: TeaspoonStudiosLogo2024_8
+  - first:
+      213: 7026250215982829831
+    second: TeaspoonStudiosLogo2024_9
+  - first:
+      213: -7436447984364335738
+    second: TeaspoonStudiosLogo2024_10
+  - first:
+      213: -7238480650732776364
+    second: TeaspoonStudiosLogo2024_11
+  - first:
+      213: 3224425585668830539
+    second: TeaspoonStudiosLogo2024_12
+  - first:
+      213: -1589204586924691286
+    second: TeaspoonStudiosLogo2024_13
+  - first:
+      213: 2625856088313763116
+    second: TeaspoonStudiosLogo2024_14
+  - first:
+      213: 7487527754179326407
+    second: TeaspoonStudiosLogo2024_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 761
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06dc7a886a071afa0800000000000000
+      internalID: -5791223785262166688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_1
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 416
+        width: 102
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88c2711cfbf5bbb0800000000000000
+      internalID: -4920749957789333363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_2
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 416
+        width: 89
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668bbbc5aa7551460800000000000000
+      internalID: 7211766767515580518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_3
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 416
+        width: 141
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0749a0a1f6a8e4130800000000000000
+      internalID: 3552929365824803952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_4
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 413
+        width: 105
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa969778789f0ace0800000000000000
+      internalID: -1395841523996071510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 416
+        width: 103
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ded6e651ab2bdc30800000000000000
+      internalID: 4385146634123009753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_6
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 413
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac9a62fd9b5e6920800000000000000
+      internalID: 2985424336928283819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_7
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 413
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2676bf4131a8a90800000000000000
+      internalID: -7311010064244448547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_8
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 413
+        width: 117
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e390928f1820080800000000000000
+      internalID: -9222666184061010347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_9
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 195
+        width: 105
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7011ba24851428160800000000000000
+      internalID: 7026250215982829831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_10
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 198
+        width: 102
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d4b4d45fd6cc890800000000000000
+      internalID: -7436447984364335738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_11
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 195
+        width: 113
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454d8830330cb8b90800000000000000
+      internalID: -7238480650732776364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_12
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 198
+        width: 119
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45b8768cf57fbc20800000000000000
+      internalID: 3224425585668830539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_13
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 198
+        width: 32
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0bee029d202f9e0800000000000000
+      internalID: -1589204586924691286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_14
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 195
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c251d3f233ae07420800000000000000
+      internalID: 2625856088313763116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeaspoonStudiosLogo2024_15
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 195
+        width: 105
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1bcb162da09e760800000000000000
+      internalID: 7487527754179326407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TeaspoonStudiosLogo2024_0: -5791223785262166688
+      TeaspoonStudiosLogo2024_1: -4920749957789333363
+      TeaspoonStudiosLogo2024_10: -7436447984364335738
+      TeaspoonStudiosLogo2024_11: -7238480650732776364
+      TeaspoonStudiosLogo2024_12: 3224425585668830539
+      TeaspoonStudiosLogo2024_13: -1589204586924691286
+      TeaspoonStudiosLogo2024_14: 2625856088313763116
+      TeaspoonStudiosLogo2024_15: 7487527754179326407
+      TeaspoonStudiosLogo2024_2: 7211766767515580518
+      TeaspoonStudiosLogo2024_3: 3552929365824803952
+      TeaspoonStudiosLogo2024_4: -1395841523996071510
+      TeaspoonStudiosLogo2024_5: 4385146634123009753
+      TeaspoonStudiosLogo2024_6: 2985424336928283819
+      TeaspoonStudiosLogo2024_7: -7311010064244448547
+      TeaspoonStudiosLogo2024_8: -9222666184061010347
+      TeaspoonStudiosLogo2024_9: 7026250215982829831
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
