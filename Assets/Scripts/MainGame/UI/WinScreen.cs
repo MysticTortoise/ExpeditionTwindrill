@@ -23,6 +23,5 @@ public class WinScreen : MonoBehaviour
     public void MainMenu()
     {
         WipeTransition.SceneTransition("MainMenu");
-        MusicHandler.StopMusic();
     }
 }
