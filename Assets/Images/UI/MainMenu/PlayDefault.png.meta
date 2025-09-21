@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a415632271a46a44eab53f58bb729cc4
+guid: 4257a4bdfc705264b8d1c47be3fbe1b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3444461482883331301
-    second: SGJ_HealthBar_0
+      213: -7057333209097550929
+    second: PlayDefault_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SGJ_HealthBar_0
+      name: PlayDefault_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 64
+        x: 14
+        y: 2
+        width: 106
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e4b6c9187f2dcf20800000000000000
-      internalID: 3444461482883331301
+      spriteID: fa34c2276d05f0e90800000000000000
+      internalID: -7057333209097550929
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SGJ_HealthBar_0: 3444461482883331301
+      PlayDefault_0: -7057333209097550929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
