@@ -14,6 +14,8 @@ public class DamageHandler : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private SubPlayerController sub;
 
+    public bool invincible = false;
+
     private Animator animator;
 
     private AudioSource hitSound;
@@ -36,6 +38,7 @@ public class DamageHandler : MonoBehaviour
 
     public void TakeDamage(Vector2 hitPoint, float forceMult = 1)
     {
+        if (invincible) { return; }
         if (!cooldownActive)
         {
             health--;

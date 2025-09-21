@@ -64,4 +64,10 @@ public class MainPlayerController : MonoBehaviour
 
         gameOver = true;
     }
+
+    public void Victory()
+    {
+        GetComponent<PlayerInput>().enabled = false;
+        GetComponent<DamageHandler>().invincible = true;
+    }
 }

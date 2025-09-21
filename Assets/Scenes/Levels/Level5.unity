@@ -372,6 +372,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelDefault
       objectReference: {fileID: 0}
+    - target: {fileID: 5153919213622770312, guid: c771e7703ac19d1478cf92223b3c7693, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195042131766856378, guid: c771e7703ac19d1478cf92223b3c7693, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7338847531791723781, guid: c771e7703ac19d1478cf92223b3c7693, type: 3}
       propertyPath: m_Size.x
       value: 0.64
