@@ -11,6 +11,7 @@ public class CreditsButton : MonoBehaviour
 {
     [SerializeField] Image creditsPanel;
     [SerializeField] Button creditsButton;
+    [SerializeField] CanvasGroup panelGroup;
 
     int buttonMode = 0; // 0 = open, 1 = close
     [SerializeField] float buttonExpandFactor = 1.2f;
@@ -59,6 +60,9 @@ public class CreditsButton : MonoBehaviour
         isAnimating = true;
         var credBtnTransform = creditsButton.transform;
 
+        panelGroup.transform.localScale = new Vector2(.85f, .85f);
+        panelGroup.alpha = 0f;
+
         //disable other buttons while animating
         foreach (Button button in buttonsToModify)
         {
@@ -92,7 +96,11 @@ public class CreditsButton : MonoBehaviour
 
         yield return sequence.WaitForCompletion();
 
-        yield return DOTween.Sequence().Append(credBtnTransform.DOScale(1f, buttonMoveDuration).SetEase(Ease.OutExpo)).WaitForCompletion();
+        //scale button back
+        yield return DOTween.Sequence().Append(credBtnTransform.DOScale(1f, buttonMoveDuration).SetEase(Ease.OutExpo))
+                                       .Join(panelGroup.DOFade(1, buttonMoveDuration))
+                                       .Join(panelGroup.transform.DOScale(1, buttonMoveDuration))
+                                       .WaitForCompletion();
        
         isAnimating = false;
         buttonMode = 1; //set to close
