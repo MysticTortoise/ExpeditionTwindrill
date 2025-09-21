@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class HandOuchy : MonoBehaviour
 {
-    private damage damageHandler;
+    private DamageHandler damageHandler;
+    private HandPlayerController hand;
 
     private void Start()
     {
-        damageHandler = FindObjectsByType<damage>(FindObjectsSortMode.None)[0];
+        damageHandler = FindObjectsByType<DamageHandler>(FindObjectsSortMode.None)[0];
+        hand = FindAnyObjectByType<HandPlayerController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,6 +16,7 @@ public class HandOuchy : MonoBehaviour
         if(collision.GetComponent<DontTouch>() != null)
         {
             damageHandler.TakeDamage(transform.position);
+            hand.Shock();
         }
     }
 }

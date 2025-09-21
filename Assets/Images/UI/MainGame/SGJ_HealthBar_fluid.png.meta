@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a415632271a46a44eab53f58bb729cc4
+guid: de669a98813377c4e8b234d2dbb5250e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3444461482883331301
-    second: SGJ_HealthBar_0
+      213: 2065001848541429299
+    second: SGJ_HealthBar_fluid_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SGJ_HealthBar_0
+      name: SGJ_HealthBar_fluid_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
+        width: 252
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e4b6c9187f2dcf20800000000000000
-      internalID: 3444461482883331301
+      spriteID: 33e36da8d3c58ac10800000000000000
+      internalID: 2065001848541429299
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SGJ_HealthBar_0: 3444461482883331301
+      SGJ_HealthBar_fluid_0: 2065001848541429299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class damage : MonoBehaviour
+public class DamageHandler : MonoBehaviour
 {
     [SerializeField] private float damageForce;
 
@@ -10,15 +10,17 @@ public class damage : MonoBehaviour
     public SceneManager gameOver;
     private float cooldownTimer;
     public float cooldownTime = 2f;
-    private bool cooldownActive = false;
-    private float timer;
+    private bool cooldownActive { get { return cooldownTimer > 0; } }
     private SpriteRenderer spriteRenderer;
     private SubPlayerController sub;
+
+    private Animator animator;
 
     private void Start()
     {
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         sub = GetComponent<SubPlayerController>();
+        animator = GetComponent<Animator>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -33,11 +35,11 @@ public class damage : MonoBehaviour
         if (!cooldownActive)
         {
             health--;
-            cooldownActive = true;
+            cooldownTimer = cooldownTime;
             Debug.Log(health);
             if (health == 0)
             {
-                SceneManager.LoadScene("GameOver");
+                FindAnyObjectByType<MainPlayerController>().GameOver();
             }
 
             Vector2 dir = hitPoint - (Vector2)transform.position;
@@ -52,14 +54,9 @@ public class damage : MonoBehaviour
         if (cooldownActive)
         {
             cooldownTimer -= Time.deltaTime;
-            if (cooldownTimer <= 0)
-            {
-                cooldownActive = false;
-            }
-            
         }
-        spriteRenderer.enabled = !cooldownActive || 
-            (cooldownTimer % 0.5f <= 0.25f);
+        animator.SetBool("Damaged", cooldownActive);
+        
     }
 
 }

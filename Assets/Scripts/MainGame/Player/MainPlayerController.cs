@@ -56,6 +56,7 @@ public class MainPlayerController : MonoBehaviour
         Debug.Log("UH OH GAME OVER SAD");
         Destroy(sub.gameObject);
         Destroy(hand.gameObject);
+        FindAnyObjectByType<PlayerUI>().ShowGameOver();
 
         gameOver = true;
     }
