@@ -145,7 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5838546607612905228}
   sizeMin: 5
-  sizeMax: 15
+  sizeMax: 15.7
+  speed: 1
 --- !u!58 &720450727961129037
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +182,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.12
+  m_Radius: 0.07821177
 --- !u!114 &2814794996655290416
 MonoBehaviour:
   m_ObjectHideFlags: 0

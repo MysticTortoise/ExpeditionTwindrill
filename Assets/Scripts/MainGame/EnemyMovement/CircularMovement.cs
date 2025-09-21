@@ -25,6 +25,7 @@ public class CircleMovement : MonoBehaviour
         transform.position = originPoint + new Vector3(
             Mathf.Cos(timer) * radius, Mathf.Sin(timer) * radius
             );
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(Mathf.Cos(timer), Mathf.Sin(timer)));
     }
 
     private void OnDrawGizmosSelected()
