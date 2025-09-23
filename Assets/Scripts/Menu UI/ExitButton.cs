@@ -24,11 +24,23 @@ public class ExitButton : MonoBehaviour
     [SerializeField] Vector3 finalPromptTxtInitSize = new Vector3(0.85f, 0.85f, 0);
     [SerializeField] Vector2 buttonExpandFinalSize;
 
+#if UNITY_WEBGL
+
+    private void Update()
+    {
+        GetComponent<Image>().enabled = false;
+        GetComponent<Button>().interactable = false;
+    }
+#endif
+
     /// <summary>
     /// brings up a confirmation dialog to exit the game
     /// </summary>
     public void OnClick()
     {
+#if UNITY_WEBGL
+        return;
+#endif
         if (exitGame != true && isAnimating != true)
         {
             StartCoroutine(ExitPromptSequence());
