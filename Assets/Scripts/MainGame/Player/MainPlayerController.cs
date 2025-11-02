@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class MainPlayerController : MonoBehaviour
 {
@@ -68,5 +69,11 @@ public class MainPlayerController : MonoBehaviour
     {
         GetComponent<PlayerInput>().enabled = false;
         sub.GetComponent<DamageHandler>().invincible = true;
+        int currentLevel = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
+        if (SaveGame.levelsBeaten < currentLevel)
+        {
+            SaveGame.levelsBeaten = currentLevel;
+            SaveGame.Save();
+        }
     }
 }

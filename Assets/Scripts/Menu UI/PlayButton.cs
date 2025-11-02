@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 /// <summary>
 /// overcomplicated script for play button effects
@@ -17,6 +19,11 @@ public class PlayButton : MonoBehaviour
     [SerializeField] float hoverScale = 1.25f;
     [SerializeField] Button[] buttonToDisable;
 
+
+    public void Start()
+    {
+        SaveGame.Load();
+    }
 
     public void OnPointerEnter()
     {
