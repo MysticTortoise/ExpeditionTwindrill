@@ -101,4 +101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  scrollModifier: {x: 0.03, y: 0.05}
+  scrollModifier: {x: 0.03, y: 0.04}
